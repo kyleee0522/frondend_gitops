@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-keycloak
+  name: frontend
   labels:
-    app: frontend-keycloak
+    app: frontend
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: frontend-keycloak
+      app: frontend
   template:
     metadata:
       labels:
-        app: frontend-keycloak
+        app: frontend
     spec:
       containers:
-      - name: frontend-keycloak
+      - name: frontend
         # image: hoooo/frontend_0131
         image: ghcr.io/shclub/vue3:v1
         imagePullPolicy: Always
